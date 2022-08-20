@@ -1,0 +1,298 @@
+#+TITLE: Chapter 1: Rule Based Volatility Investment
+
+* Learning to Love Volatility
+
+On average, selling volatility is a profitable strategy because
+investors will always be willing to pay for protection against
+uncertainty. The *volatility premium* exists because of investor fear.
+
+Market expected "implied volatility" is a biased estimate of future
+realized volatility. Imbued in the implied volatility price, which is
+a snapshot of what the market expects future volatility will be, is
+the volatility risk premium, which is the compensation given in
+exchange for bearing the risks of an uncertain future.
+
+The implied risk of default overshoots the actual risk because the
+market demands a "risk premium" to be priced in for the additional
+uncertainty.
+
+Contrary to our natural intuition and emotions, the best time to issue
+floor insurance is immediately after a crisis because that is when the
+risk premium is the highest. In fact, after a major market crisis,
+volatility tends to be the beset performing asset class.
+
+* Volatility in Capital Markets
+
+Assume the market implies that X corp is going to be moving an average
+of 10% over the next year, so implied volatility is 10%. Your research
+and forecast is that actual volatility will be much lower than
+10%. You short volatility, meaning you receive the implied volatility
+of 10% and pay the realized volatility, whatever it may be. In effect,
+you have sold an insurance policy to people afraid of volatility over
+10% occurring. If it turns out that X Corp moves less than 10%, you
+profit.
+
+It is important to clarify what people in finance mean when they
+discuss volatility. Is it:
+
+- Historical Volatility
+  - std dev of past rate of returns, taken from price history
+- Actual Volatility
+  - volatility you want to forecast at a future time
+- Implied Volatility
+  - volatility implied by the options market.
+  - the price of an option depends on strike, tenor, vol and others.
+    - if strike and tenor and others are fixed, you can derive vol from the option price
+
+Implied volatility is merely a price, a snapshot of market expectation
+of actual volatility at a particular moment.
+
+* Investing in Volatility Through Rules
+
+Volatility is its own asset class, and just as in credit or equity
+markets, investors can expect to profit from taking risks in
+volatility premium, the difference between implied and realized
+volatility.
+
+An appealing characteristic of adding volatility investing to the
+portfolio is that it has low correlation with traditional asset
+classes, such as equities or bonds.
+
+Examples 1, 2, & 3 in this chapter provide a walk-through on how to
+construct simple rules in 3 markets:
+
+1. Foreign Exchange
+2. Equity Indices
+3. Rates
+
+* Profiting from Volatility and Awareness of the Danger
+
+The Sharpe ratio is a measure of the risk premium of an asset, meaning
+that between 2 assets with equal return, the one with a greater Sharpe
+ratio required less risk to generate the same results and hence is the
+smarter investment.
+
+The reason that the volatility premium hasn't been traded away is that
+the persistence of positive vol premiums (where the implied vol is
+higher than the actual realized vol) is not a market failure of
+mispricing; it is a by-product of a fundamental market force: aversion
+to uncertainty.
+
+The *fear of uncertainty* is as fundamental an economic principle as the
+time value of money. Volatility investors are compensated for
+providing protection against market turmoil in the same way that in
+fixed income there is a "term premium" for longer dated bonds to
+compensate for the uncertainty of future inflation and economic
+growth.  What the volatility premium comes down to is receiving the
+"insurance premium" and paying back the actual realization.
+
+When rare events happen, long volatility premium suffers losses that
+are disproportionately large. Fortunately, they recover quickly
+because it is the aftermath of a crisis in which volatility premium is
+highest.
+
+* The Examples of Rule Based Volatility Investments
+
+Of the strategies developed, a common aspect of those rules applied to
+all volatility investment is to employ both statistical and market
+price implied indicators to dictate when /not/ to invest in volatility
+premium.
+
+** Example 1: Rule-Based USDJPY Volatility Strategy
+
+The naive volatility strategy is defined as follows:
+
+Every month, you invest the same amount of capital in USDJPY one-month
+volatility swap. The swap obligates you at the end of the month to pay
+the realized volatility and receive a predetermined strike whose level
+is closely associated with one month at-the-money implied
+volatility. In other words, the naive strategy is to just "buy and
+hold" vol premium month after month, no matter what happens.
+
+*** Learning from History: GARCH Filter
+
+If high frequency data is not easy to obtain, you can also use GARCH
+(Generalized Autoregressive Conditional Heteroskedasticity) to measure
+and forecast actual volatility. Their explanation:
+
+Volatility is time varying, meaning it changes over time from times of
+calm to times of anxiety, and periods of different volatility tend to
+cluster together. GARCH is a simple model that incorporates these
+principles. Heteroskedasticity means non-constant variance, such as
+that displayed by the markets.
+
+Armed with GARCH returning an estimate of the actual volatility, you
+can now apply the first filter to the naive vol premium strategy.
+
+Every month you enter a volatility swap contract with one month tenor
+in fixed amount of capital. The contract obligates you to receive a
+pre-determined strike level closely associated to the one-month
+at-the-money implied USDJPY volatility and pay upcoming realized
+volatility. If GARCH predicts upcoming high volatility, it indicates
+that recent market has experienced an unexpected large move. Something
+is happening begind the scenes that raising anxiety. If GARCH predicts
+a higher move, you don't take the risk of paying upcoming actual vol
+in the coming month, and instead stay on the sideline.
+
+*** Learning from the Market: VIX Filter
+
+The VIX filter, the second rule, is constructed as follows:
+
+If yesterday's VIX closed higher than its one month average, you want
+to stay away from taking on risk in receiving vol premium.
+
+Other ways to construct a global risk indicator other than the VIX filter:
+- bid-ask spread is a good proxy for the liquidity of a market
+  - if a bid-ask spread is larger than usual, this indicates market
+    makers are nervous; willingness to provide liquidity has fallen.
+  - Int his case, avoid any short vol strategy from taking on risk
+- The TED spread
+  - The difference between 3 month LIBOR and T-bill rate.
+  - When the spread between LIBOR and T-bill rates are tight, banks
+    see loaning to each other almost as safe as U.S. Treasuries
+  - When the spread widens, it indicates banks view lending to each
+    other as less secure and more risky.
+
+*** Together and Stronger: Applying Both Filters
+
+Applying both the GARCH and VIX filters results in nearly double the
+buy and hold return on the S&P during the same time period (2001-2013)
+with a better Sharpe ratio (.9 vs .18).
+
+** Example 2: S&P 500 Volatility
+
+To invest in foreign exchange volatility, a volatility swap is the
+simplest instrument; in the equity markets volatility premium is best
+captured through a variance swap. Investing in volatility is also
+possible through selling a one-month in at-the-money options straddle
+and delta hedge until maturity. Short straddle is an option strategy
+that pays out if prices remain within a certain range, meaning low
+volatility is expected.
+
+Using the two simple filters, the next rules introduced in this
+chapter aim to "smooth out" the big swings of volatility investing and
+reduce the impact of crisis events.
+
+*** Learning from History: The GARCH Filter
+
+Every month you invest the same amount of capital to receive
+volatility premium, by entering a trade to receive a predetermined
+strike closely related to at-the-money implied volatility or variance
+and to pay upcoming realized volatility or variance. If GARCH's
+forecast of conditional variance is high because the most recent
+market data shows and exceptional movement (tremors of volatility if
+you will), you do not take the risk of going short vol in the coming
+month.
+
+Most significantly, the GARCH filter helped to turn the large loss
+that resulted from the naive strategy into profit.
+
+25.75% -> 28.6% annualized return
+0.99 -> 2.6 Sharpe Ratio
+
+*** Learning from the Market: VIX Filter
+
+In the same fashion as for USDJPY volatility premium, each month we
+only invest in S&P 500 volatility premium if yesterday's VIX closes
+below its own historical average.
+
+25.7% -> 28.0% annualized return
+0.99 -> 1.67 Sharpe Ratio
+
+*** Together and Stronger
+
+25.7% -> 23.4% annualized return
+0.99 -> 1.97 Sharpe Ratio
+
+The joint risk filter switched risk "off" for some borderline volatile
+months. Had risk stayed on, it would have turned out that those months
+were actually profitable, hence the higher return achieved by applying
+the GARCH filter alone.
+
+Keeping risk on during those months, while profitable, is not a smart
+risk to take. The joint filter has the highest Sharpe, indicating more
+intelligent risk.
+
+There are other indicators than the VIX alone; some suggested by
+academic research are to use the variance swap term structure or the
+shape of the variance curve.
+
+** Example 3: Swap Rates Volatility
+
+This final example demonstrates how to create and apply simple rules
+to aid in avoiding major losses in volatility premium for 10-year
+U.S. swap rates. The persistent alpha of the volatility premium is
+particularly pronounced in the U.S. swap rate market where mortgage
+hedging against prepayment risk creates a natural demand for shorter
+dated volatility.
+
+The rules introduced here are to help you escape (or at least dodge)
+the full impact of a market crisis event.
+
+Interest rate vol or variance swap is much less liquid than ForEx or
+equity markets. The simplest way to capture vol premium in swap rates
+is to sell an at-the-money swaption straddle and delta hedge it until
+expiration. A one-month at-the-money straddle is very liquid, which is
+ideal. Liquidity itself is a function of the risk premium a market is
+charging.
+
+*** Learning from History: GARCH Filter
+
+To receive the vol premium, every month you sell the same amount of
+one-month straddle and delta hedge. If GARCH predicts a high
+volatility in the near future, so that vol premium does not exceed an
+economic threshold, you do not want to take the risk of short
+volatility in the coming month. Again, GARCH here serves as a
+"sophisticated average" of return movement.
+
+18.13% -> 17.4% annualized return
+0.65 -> 0.82 Sharpe Ratio
+
+*** Learning from the Market: (Slope of) Vol Curve Filter
+
+The next filter is constructed by using the implied volatility curve
+as an on/off switch for the naive strategy of selling one-month
+straddles.
+
+Under normal market conditions, the volatility curve should be upward
+sloping, i.e., the price of longer dated options should be higher than
+shorter dated options because more uncertainty is priced in. When the
+options market expects an eminent crisis, the prices for short
+maturity options spike up even more than the prices for longer dated
+options. The market is essentially saying that tomorrow is much more
+uncertain than a year from now -- leading to an inverted volatility
+curve.
+
+We can apply the vol curve filter as follows:
+
+Focus on only 2 points along the vol curve, the one month vs. the one
+year option maturities. Define the slope as the difference (in ratio)
+between at-the-money volatilities of one-month and one-year options
+for U.S. 10-year swap rates. Only invest in the volatility premium if
+yesterday's vol curve slope is not higher than its own historical
+average.
+
+In other words, if the short end of the vol curve is high compared
+with the long end of the vol curve (meaning the near future is
+uncertain), you do not want to take the risk of investing in vol
+premium because it implicitly implies that the options market is
+pricing an imminent crisis.
+
+18.13% -> 15.21% annualized return
+0.65 -> 0.88 Sharpe Ratio
+
+*** Together and Stronger: Applying Both Filters
+
+18.13% -> 14.26% annualized return
+0.65 -> 0.94 Sharpe Ratio
+
+* Building a Volatility Portfolio
+
+Now we discuss a volatility portfolio that is equally weighted with
+the 3 strategies that combine GARCH and market implied data already
+presented.
+
+If any vol strategy is risk off (meaning the rules say don't invest),
+you underinvest; i.e. not reallocating the risk to the remaining
+strategies. If all 3 vol strategies are risk off, you do not invest at
+all.
