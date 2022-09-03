@@ -1,0 +1,163 @@
+#+TITLE: Chapter 2: Rule Based Carry and Momentum Investment
+
+This chapter is about the effectiveness of applying simple rules to
+the carry investment. The carry trade will be defined, a "benchmark"
+established, and finally rule based carry strategies will be discussed
+to improve returns and reduce risk.
+
+A *carry trade* broadly means receiving returns from holding (/going
+long/) on asset against borrowing (/shorting/) another asset. An example
+with interest rates: Borrow at low rates and lend or receive long-term
+rates such as 30-year rates, assuming an upward sloping yield
+curve. This is known as a *positive carry* because the net position is
+profitable to hold. The inverse position of receiving short-term rates
+and paying long-term rates is *negative carry* because it is held at a
+loss. Negative carry, similar to shorting a stock, is a speculative
+high-risk strategy where the expectation of a dramatic repricing of
+assets would compensate for the losses of passively holding an
+unprofitable position. The chapter focuses on the positive carry.
+
+In financial markets, carry trade is generally understood to refer to
+investments in currency markets in which you borrow in currencies with
+low interest rates to buy and hold different currencies with high
+interest rates. It is essentially interest rate arbitrage between
+currency pairs. The investment will be profitable as long as target
+currency does not weaken against funding currency too greatly to erase
+the interest rate differential.
+
+* "Benchmark" Returns in the FX Carry Trade
+
+A benchmark currency carry investment is needed to illustrate in
+greater detail the profitability vs the risk of investing in the
+simplest form of the carry strategy.
+
+The *rule* is that one the monthly basis, you create an equally weighted
+basket such that if the interest rate of the foreign currency is
+higher than the US rate, you borrow 1 USD and buy and hold the foreign
+currency for a month. If the interest rate of the foreign currency is
+lower than the US rate, you borrow 1 USD worth of foreign currency and
+buy and hold the USD for a month. You receive the net interest rates
+for holding the position.
+
+From January 2001 to June 2013, 6 out of the 9 currency carry trades
+in the book outperformed the S&P 500. The Sharpe ratio of the returns
+are higher and the returns are less skewed (where skew tells us that
+if the market goes down, the value of an asset also goes down to an
+even greater degree). Moreover, returns of carry trades are relatively
+uncorrelated with returns from other risky assets such as the S&P 500.
+
+* The Risks of the FX Carry Trade
+
+[[https://www.youtube.com/watch?v=fpK36FZmTFY][What risks? We didn't see any risks, did we Charlie?]]
+
+The risk that underlies the average excess returns of 3.5% with a
+Sharpe ratio exceeding that of the S&P of the carry trade is that
+exchange rates can move in a volatile and dramatic fashion.
+
+* The Steam Roller
+
+Warren Buffet once said that the carry trade is like picking up the
+nickels before the steam roller. Popular carry trades have become
+highly correlated with other risky assets, such as the S&P 500 and the
+U.S. high yield credit market, and correlation tends to further
+increase during a crisis.
+
+* Simple yet Effective Rules for Carry Investment
+
+Faced with the threat of an approaching steam roller, what is needed
+is an early alert system.
+
+1. Use diversification across currencies
+2. Use VIX (implied volatility of S&P 500 options) as a market indicator of trouble
+3. Use a simple momentum strategy as a hedge against carry
+
+** Diversification
+
+Instead of choosing a single currency pair, you build a diversified
+carry portfolio with the 9 most liquid currencies (G9) against the
+USD. Buy currencies with positive carry, sell those with negative
+carry against the USD and hold the positions for a month.
+
+From Jan '01 to Jan '13, the simple diversified carry portfolio (equal
+weighting) had a Sharpe ratio of 0.62, 50% higher than the average of
+individual carry trades.
+
+Another way is to buy the top 3 currencies with the highest interest
+rate differential and sell equal amounts of the bottom 3 currencies
+with the lowest interest differential. Even if a currency has a
+positive interest rate differential against the USD, if its among the
+lowest, you still sell it. The long 3/short 3 carry portfolio can
+obtain a Sharpe ratio of 0.7.
+
+** VIX: Reading Market Indicators to Avoid the Steam Roller
+
+It is easy to observe the behavior of the options market as an
+indicator for risk. Options trading is heavily quantitative, and
+options desks are well equipped to detect the slightest change in risk
+sentiment and act quickly at the slightest hint of trouble.
+
+When there is a spike in implied volatility, it means that the "fast
+money" is uneasy and nervous. High implied volatility is a warning to
+approach the market with caution.
+
+You can implement the VIX filter through rules that switch the carry
+trade on and off conditional to the VIX. You invest in the 9 most
+liquid currencies (G9) against the USD. Once each month you look at
+the level of the VIC that prevailed at the close of the previous
+trading day. If the level of the VIX the day before is higher than the
+90th percentile of the past year's VIX levels, you do not enter a
+carry trade, otherwise you do enter.
+
+The results are quite nice:
+
+
+#+DOWNLOADED: screenshot @ 2022-09-03 07:11:55
+[[file:Simple_yet_Effective_Rules_for_Carry_Investment/2022-09-03_07-11-55_screenshot.png]]
+
+Other indicators can also be used for risk on/off signaling:
+
+- the TED spread
+- currency-specific volatility indices
+  - such as JP Morgan's Global FX Volatility Index
+- credit spreads
+- the slope of the yield curve
+
+** Momentum Strategy as a Hedge for Carry Investment
+
+A momentum strategy simply means buying assets that have produced
+positive returns in the past and selling those that have produced
+negative returns. Numerous academic studies have found that the
+momentum strategy is a good hedge for carry, not just for FX, but also
+for other risky asset classes such as equities and commodities.
+
+The major difference among all of the possible variations of momentum
+strategies lies in the compression or representation of information
+extracted from past price movement.
+
+A popular momentum strategy for example is the /moving average cross-over/:
+
+You select a short window (e.g. 5 days) and a long window (e.g. 200
+days) moving average. Then, if the short-term moving average is higher
+than the long-term moving average, a buy signal is generated.
+
+The author passes the buck here, and states that there are countless
+papers and books on momentum trading, so this book will focus on the
+moving average cross-over:
+
+Each month you go long those currencies against the USD whose 3 month
+returns are higher than their one year returns, against selling those
+currencies with a 3 month return lower than the one year return.
+
+Importantly, the simple momentum portfolio constructed is negatively
+correlated with the 2 diversified carry strategies (equally weighted
+and long 3/short 3).
+
+Using a mix of 50/50 long/short with momentum lead to a greater Sharpe
+Ratio of 1.08.
+
+* Some Remarks
+
+What has been presented so far is only the most basic illustration of
+building a rule based strategy. There are myriad ways to improve
+results by employing additional rules and filters, such as using the
+carry risk ratio, purchasing power parity, and changes in yield.
