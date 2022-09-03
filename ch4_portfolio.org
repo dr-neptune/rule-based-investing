@@ -1,0 +1,20 @@
+#+TITLE: Chapter 4: Rule Based Portfolio
+
+Now we put everything together. Instead of an equal weighting, we use
+*inverse volatility weighting*. It can be implemented by using a rolling
+12 month standard deviation of each strategy's returns and allocating
+funds to each strategy inverse to its volatility. So if one strategy
+has low volatility, the next month's weighting will reflect a greater
+allocation to that strategy. If a strategy is increasingly volatile,
+the amount allocated will be reduced. The purpose of inverse
+volatility weighting is to minimize the variance of the sum, producing
+returns of greater stability.
+
+The performance of rule based strategies are net of transaction costs;
+the systematic trader index and hedge fund index are net of fees; the
+benchmarks of equity and high yield are not.
+
+The key lesson to take away from rule based strategies is that we can
+trust simple rules to take us far. Be skeptical of complexity; it is
+essential to understand in simple terms how an investment makes money
+and why the opportunity persists.
