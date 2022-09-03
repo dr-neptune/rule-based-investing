@@ -1,0 +1,275 @@
+#+TITLE: Chapter 3: Rule Based Value Investment
+
+* Value in Emerging Markets
+
+Value investing typically refers to the process of selecting single
+name stocks. Investors employ a variety of methods to determine and
+analyze a company's true "value" using factors such as book value,
+price-to-earnings and book-to-market ratio. There are many books on
+value investing, so the author chooses to have this book focus on
+value investing within the emerging markets.
+
+Emerging markets' returns experience a greater skewness and kurtosis
+than developed market returns. This means that when a crisis occurs
+and markets go down, they do so in a particularly dramatic fashion.
+Monetary interventions are typically more frequent for emerging market
+countries. Momentum is of limited use in this situation because it
+does not take into account the impact of monetary intervention to the
+market prices. Another concern is that liquidity can be limited in
+emerging markets, leading to prices being unreliable, bid/ask spreads
+widening, and the cost of exiting heightening.
+
+Instead of using historical price data, rules based on macroeconomic
+fundamentals are applied to both currencies and hard currency
+denominated sovereign bonds, the two more liquid instruments in
+emerging markets. The analysis in this chapter looks at each country's
+growth, inflation, debt level, and interest rates to select good carry
+and credit worthiness.
+
+*Credit default swaps* can be thought of an insurance policies for bond
+ holders. Suppose an investor holds a portfolio of illiquid bonds for
+ an emerging market economy yielding 6% and there is a political
+ event, such as an election, that creates temporary
+ uncertainty. Rather the incur the expense of liquidating the
+ portfolio, the investor can buy a CDS as protection for a premium of
+ 2% to keep the principal safe in the event of a default over the next
+ one or two years. This means that the premium, often called the
+ spread, of a CDS can be viewed as a live risk indicator for a
+ specific credit market.
+
+* Value Investing in Emerging Market FX
+
+Outside of equities, such as in the foreign exchange and bond markets,
+"value" no longer has a straight-forward definition. The true value of
+a bond in literal terms means its future real bond yield, or rather,
+bond yield minus inflation. This value also depends on the credit risk
+of the bond and inflation. In foreign exchange, value often means the
+"fair value" given by purchasing power parity. "Value investing" here
+means that instead of choosing companies that are fundamentally
+undervalued, you use the rules to select countries that have the
+greatest fundamental potential for currency appreciation and bond
+returns.
+
+In emerging markets, high economic growth doesn't necessarily coupled
+to a strong domestic stock market. Currency appreciation is a superior
+alternative that is strongly correlated with growth. As a country
+grows, it attracts an influx of capital. The correlation between
+emerging market GDP growth and currency appreciation is 21% on
+average, whereas the correlation with emerging market equity indices
+is -6%.
+
+* Rule Based Investment in Emerging Market FX
+
+Select 10 countries to invest against the USD. The author chooses
+Brazil, Hungary, Indonesia, and a handful of others. Analogous to the
+carry strategies in chapter 2, the monthly investment rule is to buy
+fixed dollar amounts of emerging country currencies via one-month
+currency forwards. The return of each currency will be the spot
+appreciation plus the interest rate differential between the EM
+currencies and the USD.
+
+Many emerging market currencies don't have a tradable forward market
+due to capital control and convertibility issues. For these
+currencies, non-deliverable forward markets (NDF) have been developed
+and are traded offshore. The major difference between deliverable and
+NDF markets is that the latter is settled in cash and no physical
+delivery takes place.
+
+Return characteristics of EM are different than G10 currencies. From
+January '01 to Januarty '13, EM currencies delivered on average close
+to double the returns of G10 currencies. They are more negatively
+skewed and have a larger kurtosis, i.e. they have a greater frequency
+of negative returns and extreme movement than G10 currencies.
+
+
+#+DOWNLOADED: screenshot @ 2022-09-03 16:07:31
+[[file:Rule_Based_Investment_in_Emerging_Market_FX/2022-09-03_16-07-31_screenshot.png]]
+
+* Fundamental Rules
+
+Determining the intrinsic value of a currency can be done in many
+ways. This portion of the chapter focuses on 3 key macro-economic
+variables of an economy: growth, inflation, and the level of
+short-term interest rates.
+
+Rather than build a statistical model, the book employ's a basic
+ranking system. Each country is ranked according to its GDP growth,
+inflation, and short-term interest rates. On a monthly basis, you can
+buy the upper half of the countries at the top of the list.
+
+You don't go short or sell any currencies that rank in the bottom. The
+reason is that the emerging market currencies here all have higher
+interest rates than the USD. If you were to short these currencies,
+you would have negative carry, meaning that you would have to pay to
+hold that position.
+
+Use GDP growth and inflation numbers from 6 months prior to determine
+the investment for the upcoming month. For short-term rates, it is the
+rate of the rate of the previous month used in the study.
+
+Each month, you rank all 10 EM countries into 3 lists according to
+their GDP growth, inflation, and short-term rates. You buy and hold
+those currencies (against USD) for the top 5 ranked countries in each
+of the lists through one-month forwards. Each currency has an equal
+dollar amount invested at the beginning of the month.
+
+Here are the results:
+
+
+#+DOWNLOADED: screenshot @ 2022-09-03 16:21:38
+[[file:Fundamental_Rules/2022-09-03_16-21-38_screenshot.png]]
+
+We can also average the 3 macro rankings (GDP growth, inflation, and short-term rates).
+
+
+#+DOWNLOADED: screenshot @ 2022-09-03 16:22:49
+[[file:Fundamental_Rules/2022-09-03_16-22-49_screenshot.png]]
+
+* Technical Rules: Overlaying Credit Default Swap Spread as Market Indicator
+
+Let's look at another risk indicator particularly relevant for
+investing in individual emerging countries: Sovereign Credit Default
+Swap. SCDS provides protection against the credit risk of a country's
+sovereign bonds -- it is insurance for bond holders afraid of a
+default.
+
+Generally speaking, market makers, so-called "sell-side" are the
+principal buyers and sellers to CDS to hedge their portfolios and
+illiquid risk. Hedge funds and mutual funds ("buy-side") use short CDS
+positions to go long a credit mainly because of the superior funding
+terms and they use long CDS positions to avoid the hassles of selling
+a bond.
+
+Sovereign CDS spreads can be used to read the market's expectation of
+the credit worthiness of a country.
+
+If one country's CDS spread deteriorates dramatically over the
+previous month, you avoid investing in that country's currency in the
+upcoming month. For the purpose of this exercise, spreads of more than
+20% are defined as dramatic.
+
+A SCDS spread serves as a risk indicator for each individual EM
+country, as opposed to VIX, which serves as a general risk indicator
+for the global financial markets.
+
+Applying the CDS filtering rule achieves a higher return than the
+equally weighted portfolio and a comparable return to the
+fundamental/macro strategy:
+
+
+#+DOWNLOADED: screenshot @ 2022-09-03 18:11:45
+[[file:Technical_Rules:_Overlaying_Credit_Default_Swap_Spread_as_Market_Indicator/2022-09-03_18-11-45_screenshot.png]]
+
+* Combining Fundamental Rules and Risk Indicators
+
+Each month you select the top 5 countries from the macro/fundamental
+ranking system. If any of the 5 countries' CDS spreads have risen more
+than 20% over the past month, you don't invest in its currency in the
+upcoming month. The capital is reallocated to the remaining
+currencies. If none of the countries passes the CDS filter, you
+allocate the capital to the U.S. money markets for that month.
+
+This strategy does the best:
+
+#+DOWNLOADED: screenshot @ 2022-09-03 18:14:25
+[[file:Combining_Fundamental_Rules_and_Risk_Indicators/2022-09-03_18-14-25_screenshot.png]]
+
+* Value Investing in Emerging Market Sovereign Bonds
+
+There are 2 types of debts issued by sovereigns of emerging markets:
+local currency denominated and hard currency denominated. Although
+both types of debts are subject to their particular sovereign credit
+risk, the returns of local currency denominated debt are subject to
+additional currency risk for USD-based investors and are inherently
+more volatile.
+
+For example, bonds issued by Brazil can be denominated in the
+Brazilian Real or in the US Dollar. If the Real appreciates against
+the dollar, then a dollar-based investor's return is the bond return
+plus the currency gain. There is also legal risk of different
+jurisdictions; local bonds are subject to local laws, whereas hard
+currency bonds are subject to international law.
+
+We will again consider a simple ranking strategy to determine which
+countries bonds are worth investing in, focusing on the
+macro/fundamental ranking first and then complementing those returns
+with the forward-looking components of a sovereign CDS spread filter.
+
+Contrary to the EM FX, which lacks an obvious benchmark, JP Morgan's
+Emerging Market Bond Index (EMBI) is the clear choice for hard
+currency bonds.
+
+* Fundamental Rules
+
+The fundamental based investment strategy for emerging market hard
+currency bonds is similar to that for EM currencies. The ranking
+system uses GDP growth, debt to GDP, and inflation as indicators.
+
+To be conservative, the data from 6 months prior is used to determine
+the coming month's ranking.
+
+#+DOWNLOADED: screenshot @ 2022-09-03 18:29:12
+[[file:Fundamental_Rules/2022-09-03_18-29-12_screenshot.png]]
+
+Combining all 3 fundamentals by averaging the ranking, the result is:
+
+- annualized return of 6.44%
+- Sharpe Ratio of 0.84
+
+Decent decrease in risk in exchange for slightly less return.
+
+* Technical Rules
+
+SCDS spread is the market's expectation of a country's credit
+worthiness. As we did with currencies, a CDS filtering rule can be
+applied to the bond investment universe. The CDS rule is that you buy
+only those bonds with a CDS spread that has not deteriorated more than
+a certain threshold (~20% arbitrarily) over the past given month.
+
+This results in a change of:
+
+- 9.12% annualized return
+- 1.36 Sharpe Ratio
+
+very good!
+
+* Combination of Macro Fundamentals and Market Indicator
+
+Each month select the top 5 countries to invest according to their
+ranking in GDP, debt to GDP, and inflation and buy those hard currency
+denominated sovereign bonds with a CDS spread that has not
+deteriorated more than 20% over the past month. Due to this rule,
+there will be months where you will want to buy the bonds of less than
+5 countries. In this case, redistribute the risk to the remaining
+countries. If all 5 countries are a no, put the money into money markets.
+
+- annualized return of 9.33%
+- Sharpe Ratio of 1.40
+
+nice!
+
+Choosing a 50/50 emerging market foreign exchange strategy and emerging market bonds strategy achieved:
+
+- annualized net return of 11.9%
+- Sharpe Ratio of 1.73
+
+* Some Remarks
+
+Professional investors specializing in emerging markets often employ
+much more complex models in attempt to capture higher returns. Both
+the fundamental/backward looking and technical/forward looking aspect
+of this strategy can be refined and improved upon for superior
+returns.
+
+Many quantitative models incorporate credit ratings and many ratios
+have been used to better forecast the sovereign credit spread such as:
+
+- current account over GDP
+- reserves over imports
+- imports over GDP
+- real exchange rate
+
+For looking forward:
+
+- The VIX remains a valid risk indicator
+- the TED spread as an indicator of global liquidity
